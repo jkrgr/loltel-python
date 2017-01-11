@@ -1,0 +1,33 @@
+# Virtualenv
+venv
+lib
+
+# Secrets
+app/secret.py
+
+# IDE
+.idea
+
+# Vim
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+pip-log.txt
+pip-delete-this-directory.txt
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+*.tmp*
+
+# C extensions
+*.so
+
+# Backup files
+*_bak
+
