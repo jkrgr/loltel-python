@@ -3,7 +3,7 @@ venv
 lib
 
 # Secrets
-app/secret.py
+loltel.env
 
 # IDE
 .idea
