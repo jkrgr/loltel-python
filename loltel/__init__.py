@@ -6,7 +6,6 @@ import os
 from platform import python_version
 
 
-
 class Error(Exception):
     pass
 
@@ -47,7 +46,12 @@ class Client():
 
         return res
 
-    def sms_send(self, message='', to=''):
+    def send_sms(self, message='', to=''):
+        """ Send SMS to phone number.
+        :param message: Message to send
+        :param to: Phone number (MSISDN) to send to
+        :return: Response object containing `status`, `error_code` and `error`
+        """
 
         data = { "to_msisdn": to,
                  "message": message}
@@ -55,8 +59,16 @@ class Client():
         res = self.do_req(data=data, method='post', path='sms')
         return res
 
+    def search_sms(self, starts_with='', contains='', sender='', max_results=50):
+        """ Search in SMS inbox.
+        :param starts_with: The text that the SMS starts with
+        :param contains: Text that the SMS contains
+        :param sender: Phone number of the SMS sender
+        :param max_results: Maximum search result hits (deafult=50)
+        :return:
+        """
 
-    def sms_search(self, starts_with='', contains='', sender='', max_results=50):
+
         data = {"starts_with": starts_with,
                 "contains_substring": contains,
                 "from_number": sender,
@@ -64,20 +76,16 @@ class Client():
 
         res = self.do_req(data=data, method='post', path='sms/search')
 
-
-    def call_search(self):
+    def search_call(self):
         pass
 
-
-    def webhook_register(self):
+    def register_webhook(self):
         pass
 
-
-    def webhook_delete(self):
+    def delete_webhook(self):
         pass
 
-
-    def webhook_list(self):
+    def list_webhook(self):
         pass
 
 

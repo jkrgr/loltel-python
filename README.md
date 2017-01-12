@@ -17,7 +17,7 @@ source ./loltel.env  # or . ./loltel.env
 Usage
 ======
 
-Import the loltel module and construct a client object.::
+Import the loltel module and construct a client object:
 
 ```python
 import loltel
