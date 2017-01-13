@@ -28,7 +28,7 @@ client = loltel.Client()
 
 
 ```python
-response = client.sms_send(message='Goodbye, GSM!', to='47XXXXXXXX')
+response = client.send_sms(message='Goodbye, GSM!', to='47XXXXXXXX')
 print response
 ```
 
